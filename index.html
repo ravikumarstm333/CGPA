@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>CGPA Calculator</h1>
+            <p>Calculate semester SGPA and overall CGPA</p>
+        </header>
+
+        <main class="calculator-container">
+            <!-- Semester selection will be loaded here -->
+            <div id="semester-view" class="semester-view"></div>
+            
+            <!-- Results view -->
+            <div id="results-view" class="results-view hidden"></div>
+            
+            <!-- Navigation buttons -->
+            <div class="navigation-buttons">
+                <button id="prev-sem-btn" class="nav-btn hidden">← Previous</button>
+                <button id="next-sem-btn" class="nav-btn">Next Semester →</button>
+                <button id="calculate-btn" class="nav-btn primary hidden">Calculate CGPA</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
