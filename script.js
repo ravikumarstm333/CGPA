@@ -139,26 +139,29 @@ function addSubject() {
 }
 
 // Calculate grade from marks
+// Calculate grade from marks according to the provided grading scheme
 function calculateGrade(marks) {
-    if (marks > 80 && marks <= 100) {
+    if (marks >= 80 && marks <= 100) {
         return { grade: 'O', gradePoint: 10 };
-    } else if (marks >= 70 && marks <= 80) {
+    } else if (marks >= 70 && marks <= 79) {
         return { grade: 'A+', gradePoint: 9 };
-    } else if (marks >= 60 && marks < 70) {
+    } else if (marks >= 60 && marks <= 69) {
         return { grade: 'A', gradePoint: 8 };
-    } else if (marks >= 50 && marks < 60) {
+    } else if (marks >= 55 && marks <= 59) {
         return { grade: 'B+', gradePoint: 7 };
-    } else if (marks >= 40 && marks < 50) {
-        return { grade: 'C', gradePoint: 6 };
-    } else if (marks >= 0 && marks < 40) {
+    } else if (marks >= 50 && marks <= 54) {
+        return { grade: 'B', gradePoint: 6 };
+    } else if (marks >= 45 && marks <= 49) {
+        return { grade: 'C', gradePoint: 5 };
+    } else if (marks >= 40 && marks <= 44) {
+        return { grade: 'P', gradePoint: 4 };
+    } else if (marks >= 0 && marks <= 39) {
         return { grade: 'F', gradePoint: 0 };
     } else {
         return { grade: 'Invalid', gradePoint: null };
     }
 }
 
-
-// Calculate SGPA for a semester
 function calculateSGPA(semester) {
     let totalCredits = 0;
     let totalGradePoints = 0;
